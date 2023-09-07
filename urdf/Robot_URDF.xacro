@@ -447,7 +447,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 -0.1"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -457,7 +457,7 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 -0.1"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -471,10 +471,10 @@
     name="Lidar_joint"
     type="fixed">
     <origin
-      xyz="0 0 0"
+      xyz="0 0 0.1"
       rpy="0 0 0" />
     <parent
-      link="Cover_Link" />
+      link="base_link" />
     <child
       link="Lidar_Link" />
     <axis

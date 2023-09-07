@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
       <robot name="Robot_URDF" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
- <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>Robot_URDF</robotNamespace>
+ 
+ <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/Robot_URDF</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
   </gazebo>
-
+  
     <gazebo>
 <plugin name="differential_drive_controller"
 filename="libgazebo_ros_diff_drive.so">
@@ -35,14 +38,6 @@ filename="libgazebo_ros_diff_drive.so">
 </plugin>
     </gazebo>
 
- <!-- ros_control plugin -->
-  <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/Robot_URDF</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
-  </gazebo>
-  
   <!-- Link1 -->
 
   <gazebo reference="base_link">
@@ -95,7 +90,7 @@ filename="libgazebo_ros_diff_drive.so">
         <sensor type="ray" name="rplidar">
 <pose>0 0 0 0 0 0</pose>
 <visualize>true</visualize>
-<update_rate>40</update_rate>
+<update_rate>400</update_rate>
 <ray>
 <scan>
 <horizontal>
@@ -108,7 +103,7 @@ filename="libgazebo_ros_diff_drive.so">
 <range>
 <min>0.10</min>
 <max>30.0</max>
-<resolution>0.12</resolution>
+<resolution>0.1</resolution>
 </range>
 <noise>
 <type>gaussian</type>
