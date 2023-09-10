@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="Robot_URDF" type="src/control_robot.cpp" name="control_robot"
+    output="screen"/>
+
+    </launch>

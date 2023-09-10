@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <launch>
 
+
+    <!-- <node pkg="Robot_URDF" type="Control_Robot.cpp" name="control_robot"
+    output="screen"/> -->
+
+
   <!-- Custom gazebo arguements -->
   <arg name="world" default="empty" />
   <arg name="paused" default="false" />
